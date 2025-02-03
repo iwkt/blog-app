@@ -1,0 +1,138 @@
+<nav>
+  <%= link_to 'About', about_path %>
+</nav>
+<section class="hero">
+  <div class="container">
+    <h2>Welcome to Our Corporate Site</h2>
+    <h3><%= @message %></h3>
+    <p>We provide the best solutions for your business needs.</p>
+    <a href="#services" class="btn btn-primary">Learn More</a>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="service-item">
+      <h3>Consulting</h3>
+      <p>Expert advice to help you grow your business.</p>
+    </div>
+    <div class="service-item">
+      <h3>Development</h3>
+      <p>High-quality software development services.</p>
+    </div>
+    <div class="service-item">
+      <h3>Support</h3>
+      <p>24/7 support to ensure your success.</p>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="container">
+    <h2>About Us</h2>
+    <p>We are a team of professionals dedicated to helping your business succeed.</p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>Get in touch with us to learn more about our services.</p>
+    <form action="/contact" method="post">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .hero {
+    background: #333;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  .hero h2 {
+    margin: 0;
+    font-size: 2.5em;
+  }
+
+  .hero p {
+    font-size: 1.2em;
+  }
+
+  .btn-primary {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .services, .about, .contact {
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  .services h2, .about h2, .contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .service-item {
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+</style>
