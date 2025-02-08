@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @message = "Hello, World!"
+    @article = Article.first.title
+    @content = Article.first.content
   end
 
   def about
