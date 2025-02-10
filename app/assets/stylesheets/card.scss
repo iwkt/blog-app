@@ -10,6 +10,10 @@
     padding: 10px;
   }
 
+  &__text {
+    padding-bottom: 10px;
+  }
+
   &__hart {
     display: grid;
     grid-template-columns: 20px 1fr;
