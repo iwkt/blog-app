@@ -1,0 +1,47 @@
+@import "./variables";
+
+.header {
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    color: #000;
+    height: 60px;
+  }
+}
+
+.dropdown {
+  position: relative; /* 追加 */
+  height: 100%;
+
+  &__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__avatar {
+    height: 100%;
+    padding: 10px;
+  }
+}
+
+.dropdown__content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown__content.active {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
