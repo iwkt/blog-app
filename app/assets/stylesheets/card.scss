@@ -1,0 +1,28 @@
+@import "./variables";
+
+.card {
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #fff;
+  margin-bottom: 30px;
+
+  &__container {
+    padding: 10px;
+  }
+
+  &__hart {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    align-items: center;
+    gap: 5px;
+    padding-left: 18px;
+    // height: 20px;
+  }
+
+  &__detail {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 10px;
+    // padding-left: 10px;
+  }
+}

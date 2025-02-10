@@ -3,25 +3,51 @@
   <head>
     <title><%= content_for(:title) || "App" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= yield :head %>
 
-    <link rel="manifest" href="/manifest.json">
+     <%#link rel="manifest" href="/manifest.json" %>
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <header>
-      <nav>
-        <%= link_to 'Home', root_path %>
-        <%= link_to 'About', about_path %>
+    <header class="header">
+      <nav class="header__nav">
+        <%= link_to 'Home', root_path, class: 'header__nav-link' %>
+        <%= link_to 'About', about_path, class: 'header__nav-link' %>
+
+        <div data-controller="dropdown" class="dropdown">
+          <button data-dropdown-target="button" data-action="click->dropdown#toggle" class="dropdown__button">
+            <%= image_tag 'default-avatar.png' , class: 'dropdown__avatar'%> 
+          </button>
+          <!-- data-dropdown-target="dropdown" を追加 -->
+          <div data-dropdown-target="dropdown" class="dropdown__content">
+            <a href="#">プロフィール</a>
+            <a href="#">ログアウト</a>
+          </div>
+        </div>
+
+
       </nav>
-    <%= yield %>
+    </header>
+    <section class="hero">
+      <div class="container">
+        <h2>Welcome to Our Corporate Site</h2>
+        <p>We provide the best solutions for your business needs.</p>
+        <a href="#services" class="btn btn-primary">Learn More</a>
+      </div>
+    </section>
+    <main class="main">
+      <div class="main__container">
+      <%= yield %>
+      </div>
+    </main>
   </body>
 </html>
