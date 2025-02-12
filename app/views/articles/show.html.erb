@@ -1,0 +1,23 @@
+<div class="article">
+  <div class="article__image">
+    <%= image_tag 'eyecatch2' %>
+  </div>
+  <div class="article__container">
+    <div class="article__text">
+      <h1 class="article__title"><%= @article.title %></h1>
+    </div>
+    <div class="article__detail">
+      <%= image_tag 'default-avatar' %>
+      <div>
+        <p>cohki0305</p>
+        <p>2025/02/10</p>
+      </div>
+    </div>
+    <p class="article__content">
+      <%= @article.content %>
+    </p>
+    <div class="article__hart">
+      <%= image_tag 'hart.png' %>
+    </div>
+  </div>
+</div>
