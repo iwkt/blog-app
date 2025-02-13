@@ -22,10 +22,14 @@ body {
   color: $text-base-color;
 }
 
-h3 {
-  font-size: 1.5em;
+h1,
+h2 {
   line-height: 120%;
   padding-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.5em;
 }
 
 ul,

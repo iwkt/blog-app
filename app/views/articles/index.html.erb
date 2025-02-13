@@ -1,26 +1,30 @@
-<% @articles.each do |article| %>
-  <div class="card">
-    <div class="card__image">
-      <%= image_tag 'eyecatch2' %>
-    </div>
-    <div class="card__container">
-      <div class="card__text">
-        <h3 class="card__title"><%= article.title %></h3>
-        <p class="card__content">
-        <%= article.content %>
-        </p>
-      </div>
-      <div class="card__hart">
-        <%= image_tag 'hart.png' %>
-        <span>23</span>
-      </div>
-      <div class="card__detail">
-        <%= image_tag 'default-avatar1' %>
-        <div>
-          <p>cohki0305</p>
-          <p>2025/02/10</p>
+<div class="card__body">
+  <% @articles.each do |article| %>
+    <%= link_to article_path(article) do %>
+      <div class="card">
+        <div class="card__image">
+          <%= image_tag 'eyecatch2' %>
+        </div>
+        <div class="card__container">
+          <div class="card__text">
+            <h3 class="card__title"><%= article.title %></h3>
+            <p class="card__content">
+            <%= article.content %>
+            </p>
+          </div>
+          <div class="card__hart">
+            <%= image_tag 'hart.png' %>
+            <span>23</span>
+          </div>
+          <div class="card__detail">
+            <%= image_tag 'default-avatar1' %>
+            <div>
+              <p>cohki0305</p>
+              <p>2025/02/10</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-<% end %>
+    <% end %>
+  <% end %>
+</div>
