@@ -23,7 +23,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   line-height: 120%;
   padding-bottom: 10px;
 }
@@ -40,10 +41,11 @@ li {
 
 a {
   text-decoration: none;
+  color: #333;
 
-  &:visited {
-    color: inherit;
-  }
+  // &:visited {
+  //   color: initial;
+  // }
 }
 
 img {

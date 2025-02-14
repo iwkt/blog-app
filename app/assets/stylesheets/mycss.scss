@@ -57,3 +57,9 @@ body {
 .btn-primary:hover {
   background-color: #0056b3;
 }
+
+.main__container {
+  max-width: 960px;
+  width: 100%;
+  margin-inline: auto;
+}
