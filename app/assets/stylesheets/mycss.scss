@@ -63,3 +63,15 @@ body {
   width: 100%;
   margin-inline: auto;
 }
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* 必要に応じて調整 */
+  background-color: #fff; /* 必要に応じて背景色を設定 */
+}
+
+.body-content {
+  padding-top: 60px; /* ヘッダーの高さに合わせて調整 */
+}
