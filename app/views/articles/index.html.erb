@@ -9,16 +9,18 @@
         <p class="card__content">
           <%= article.content %>
         </p>
-        <div class="card__hart">
-          <%= image_tag 'hart.png' %>
-          <span>23</span>
-        </div>
-        <div class="card__detail">
-          <%= image_tag 'default-avatar1' %>
-          <div>
-            <p>cohki0305</p>
-            <p>2025/02/10</p>
-          </div>   
+        <div class="card__detail__wrapper">      
+          <div class="card__detail">
+            <%= image_tag 'default-avatar1' %>
+            <div>
+              <p>cohki0305</p>
+              <p>2025/02/10</p>
+            </div>   
+          </div>
+          <div class="card__hart">
+            <%= image_tag 'hart.png' %>
+            <span>23</span>
+          </div>
         </div>
       </div>
     <% end %>
