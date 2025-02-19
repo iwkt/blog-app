@@ -17,26 +17,24 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <header class="header">
-      <nav class="header__nav">
-        <%= link_to 'Home', root_path, class: 'header__nav-link' %>
-        <%= link_to 'About', about_path, class: 'header__nav-link' %>
-
-        <div data-controller="dropdown" class="dropdown">
-          <button data-dropdown-target="button" data-action="click->dropdown#toggle" class="dropdown__button">
-            <%= image_tag 'default-avatar.png' , class: 'dropdown__avatar'%> 
-          </button>
-          <!-- data-dropdown-target="dropdown" を追加 -->
-          <div data-dropdown-target="dropdown" class="dropdown__content">
-            <a href="#">プロフィール</a>
-            <a href="#">ログアウト</a>
-          </div>
+<body>
+  <header class="header">
+    <nav class="header__nav">
+      <%= link_to 'Home', root_path, class: 'header__nav-link' %>
+      <%= link_to 'About', about_path, class: 'header__nav-link' %>
+      <%= link_to "NEW POST" ,new_article_path, class: "btn btn-primary" %>
+      <div data-controller="dropdown" class="dropdown">
+        <button data-dropdown-target="button" data-action="click->dropdown#toggle" class="dropdown__button">
+          <%= image_tag 'default-avatar.png' , class: 'dropdown__avatar'%> 
+        </button>
+        <div data-dropdown-target="dropdown" class="dropdown__content">
+          <a href="#">プロフィール</a>
+          <a href="#">ログアウト</a>
         </div>
-
-
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
+  <div class="body-content">
     <section class="hero">
       <div class="container">
         <h2>Welcome to Our Corporate Site</h2>
@@ -46,8 +44,9 @@
     </section>
     <main class="main">
       <div class="main__container">
-      <%= yield %>
+        <%= yield %>
       </div>
     </main>
-  </body>
+  </div>
+</body>
 </html>
