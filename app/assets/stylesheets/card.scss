@@ -5,7 +5,7 @@
   border-radius: 10px;
   background-color: #fff;
   display: grid;
-  grid-row: span 5;
+  grid-row: span 4;
   grid-template-rows: subgrid;
   gap: 5px;
 
@@ -20,7 +20,7 @@
     display: grid;
     grid-template-rows: subgrid;
     grid-row: span 3;
-    padding: 0 10px;
+    padding: 0 20px 10px;
   }
 
   &__content {
