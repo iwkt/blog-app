@@ -1,4 +1,4 @@
-<div class="article">
+<div class="show article">
   <div class="article__image">
     <%= image_tag 'eyecatch2' %>
   </div>
@@ -19,5 +19,6 @@
     <div class="article__hart">
       <%= image_tag 'hart.png' %>
     </div>
+      <%= link_to "edit" ,edit_article_path(@article), class: "btn btn-primary" %>
   </div>
 </div>
