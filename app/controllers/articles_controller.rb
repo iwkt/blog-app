@@ -17,15 +17,25 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      # redirect_to @article
-      redirect_to article_path(@article)
+      redirect_to article_path(@article), notice: '保存できたぴょん'
     else
+      flash.now[:error] = '保存できなかったぴょん'
       render :new
     end
   end
 
   def edit
     @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      redirect_to article_path(@article), notice: '更新できたぴょん'
+    else
+      flash.now[:error] = '更新できなかったぴょん'
+      render :edit
+    end
   end
 
   private
