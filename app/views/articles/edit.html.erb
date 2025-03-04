@@ -1,5 +1,6 @@
 <div class="form__container">
-  <%= form_with model: @article, url: articles_path, method: :puch, class:'form' do |f| %>
+  <%= form_with model: @article, url: article_path(@article), method: :patch,  class: 'form' do |f| %>
+
     <div>
       <div>
         <%= f.label :title, 'タイトル', class: "form__text" %>
