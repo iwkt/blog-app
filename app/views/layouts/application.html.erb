@@ -17,45 +17,45 @@
     <%= javascript_importmap_tags %>
   </head>
 
-<body>
-  <header class="header">
-    <nav class="header__nav">
-      <%= link_to 'Home', root_path, class: 'header__nav-link' %>
-      <%= link_to 'About', about_path, class: 'header__nav-link' %>
-      <%= link_to "NEW POST" ,new_article_path, class: "btn btn-primary" %>
-      <div data-controller="dropdown" class="dropdown">
-        <button data-dropdown-target="button" data-action="click->dropdown#toggle" class="dropdown__button">
-          <%= image_tag 'default-avatar.png' , class: 'dropdown__avatar'%> 
-        </button>
-        <div data-dropdown-target="dropdown" class="dropdown__content">
-          <a href="#">プロフィール</a>
-          <a href="#">ログアウト</a>
+  <body>
+    <header class="header">
+      <nav class="header__nav">
+        <%= link_to 'Home', root_path, class: 'header__nav-link' %>
+        <%= link_to 'About', about_path, class: 'header__nav-link' %>
+        <%= link_to "NEW POST" ,new_article_path, class: "btn btn-primary" %>
+        <div data-controller="dropdown" class="dropdown">
+          <button data-dropdown-target="button" data-action="click->dropdown#toggle" class="dropdown__button">
+            <%= image_tag 'default-avatar.png' , class: 'dropdown__avatar'%> 
+          </button>
+          <div data-dropdown-target="dropdown" class="dropdown__content">
+            <a href="#">プロフィール</a>
+            <a href="#">ログアウト</a>
+          </div>
         </div>
+      </nav>
+    </header>
+    <% if flash.present? %>
+      <div class="flash">
+        <%= flash.each do |key, value| %>
+          <div class="<%= key %>">
+            <%= value %>
+          </div>
+        <% end %>
       </div>
-    </nav>
-  </header>
-  <% if flash.present? %>
-    <div class="flash">
-      <%= flash.each do |key, value| %>
-        <div class="<%= key %>">
-          <%= value %>
+    <% end %>
+    <div class="body-content">
+      <section class="hero">
+        <div class="container">
+          <h2>Welcome to Our Corporate Site</h2>
+          <p>We provide the best solutions for your business needs.</p>
+          <a href="#services" class="btn btn-primary">Learn More</a>
         </div>
-      <% end %>
+      </section>
+      <main class="main">
+        <div class="main__container">
+          <%= yield %>
+        </div>
+      </main>
     </div>
-  <% end %>
-  <div class="body-content">
-    <section class="hero">
-      <div class="container">
-        <h2>Welcome to Our Corporate Site</h2>
-        <p>We provide the best solutions for your business needs.</p>
-        <a href="#services" class="btn btn-primary">Learn More</a>
-      </div>
-    </section>
-    <main class="main">
-      <div class="main__container">
-        <%= yield %>
-      </div>
-    </main>
-  </div>
-</body>
+  </body>
 </html>
