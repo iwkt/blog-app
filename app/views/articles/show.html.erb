@@ -20,5 +20,6 @@
       <%= image_tag 'hart.png' %>
     </div>
       <%= link_to "edit" ,edit_article_path(@article), class: "btn btn-primary" %>
+      <%= link_to "delete" ,article_path(@article), data: { method: 'delete', confirm: "本当に削除しますか？" }, class: "btn btn-secondary" %>
   </div>
 </div>
