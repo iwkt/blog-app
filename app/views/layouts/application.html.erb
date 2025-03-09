@@ -34,15 +34,6 @@
         </div>
       </nav>
     </header>
-    <% if flash.present? %>
-      <div class="flash">
-        <%= flash.each do |key, value| %>
-          <div class="<%= key %>">
-            <%= value %>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
     <div class="body-content">
       <section class="hero">
         <div class="container">
@@ -52,6 +43,15 @@
         </div>
       </section>
       <main class="main">
+        <% if flash.present? %>
+          <div class="flash">
+            <% flash.each do |key, value| %>
+              <div class="<%= key %>">
+                <%= value %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
         <div class="main__container">
           <%= yield %>
         </div>
