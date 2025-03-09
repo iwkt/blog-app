@@ -62,3 +62,15 @@ body {
 .body-content {
   padding-top: 60px; /* ヘッダーの高さに合わせて調整 */
 }
+
+#flash-messages {
+  animation: fadeOut 1s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

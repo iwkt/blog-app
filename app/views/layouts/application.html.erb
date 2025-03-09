@@ -9,7 +9,7 @@
 
     <%= yield :head %>
 
-     <%#link rel="manifest" href="/manifest.json" %>
+    <%#link rel="manifest" href="/manifest.json" %>
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
@@ -44,10 +44,10 @@
       </section>
       <main class="main">
         <% if flash.present? %>
-          <div class="flash">
+          <div class="flash" id="flash-messages">
             <% flash.each do |key, value| %>
               <div class="<%= key %>">
-                <%= value %>
+              <%= value %>
               </div>
             <% end %>
           </div>
