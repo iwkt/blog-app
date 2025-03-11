@@ -10,7 +10,7 @@
       <%= image_tag 'default-avatar' %>
       <div>
         <p>cohki0305</p>
-        <p>2025/02/10</p>
+        <p><%= l(@article.created_at, format: :default) %></p>
       </div>
     </div>
     <p class="article__content">
