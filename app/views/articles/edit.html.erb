@@ -1,25 +1,2 @@
-<div class="form__container">
-  <%= form_with model: @article, url: article_path(@article), method: :patch,  class: 'form' do |f| %>
-
-    <div>
-      <div>
-        <%= f.label :title, 'タイトル', class: "form__text" %>
-      </div>
-      <div>
-        <%= f.text_field :title, class: "form__input" %>
-      </div>
-    </div>
-    <div>
-      <div>
-        <%= f.label :content, '内容', class: "form__text" %>
-      </div>
-      <div>
-        <%= f.text_area :content, class: "form__textarea" %>
-      </div>
-    </div>
-    <div>
-      <%= f.submit '更新', class: "btn btn-primary" %>
-      <%= link_to '戻る', root_path, class: "btn btn-secondary" %>
-    </div>
-  <% end %>
-</div>
+<%= render 'shared/form', submit: '更新', article: @article %>
+<!-- app/views/articles/edit.html.erb -->
